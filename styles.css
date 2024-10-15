@@ -168,3 +168,49 @@ footer {
     color: white;
     margin-top: 20px;
 }
+@media (max-width: 768px) {
+    #como-funciona .steps, .testimonials {
+        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+    }
+
+    .tool {
+        width: 90%; /* Ampliar a 90% en móviles */
+    }
+
+    .testimonial {
+        width: 90%; /* Ampliar a 90% en móviles */
+        margin: 10px auto; /* Centrarlos */
+    }
+}
+
+.tool {
+    transition: transform 0.2s;
+}
+
+.tool:hover {
+    transform: scale(1.05); /* Aumentar ligeramente el tamaño al pasar el mouse */
+}
+nav {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
