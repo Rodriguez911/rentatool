@@ -1,87 +1,35 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-}
-
-header {
-    background: #333;
-    color: #fff;
+/* Estilo para la sección de reseñas */
+#reseñas {
     padding: 20px;
+    background-color: #f9f9f9;
+}
+
+#reseñas h2 {
     text-align: center;
+    margin-bottom: 20px;
 }
 
-header h1 {
-    font-size: 2.5em;
-}
-
-.cta-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #ff9900;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 15px;
-}
-
-.cta-button:hover {
-    background-color: #e68a00;
-}
-
-section {
-    padding: 20px;
-}
-
-#como-funciona .steps {
+.testimonials {
     display: flex;
     justify-content: space-around;
-    margin-top: 20px;
-}
-
-#como-funciona .step {
-    width: 22%;
-    text-align: center;
-}
-
-#catalogo .tools {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-}
-
-.tool {
-    text-align: center;
-}
-
-.tool img {
-    width: 150px;
-    height: 150px;
-}
-
-#testimonios .testimonials {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
+    flex-wrap: wrap;
 }
 
 .testimonial {
-    width: 40%;
+    width: 30%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin-bottom: 20px;
     text-align: center;
-    background-color: #f4f4f4;
-    padding: 10px;
-    border-radius: 5px;
 }
 
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #333;
-    color: white;
-    margin-top: 20px;
+.testimonial p {
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.testimonial h4 {
+    color: #555;
 }
