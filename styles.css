@@ -209,11 +209,22 @@ header p {
     margin-bottom: 20px;
 }
 
+/* Estilo para la sección de contacto */
+#contacto {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+#contacto h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 /* Estilo para el formulario */
 form {
     display: flex;
     flex-direction: column; /* Colocar los elementos en una columna */
-    max-width: 500px; /* Limitar el ancho máximo del formulario */
+    max-width: 600px; /* Limitar el ancho máximo del formulario */
     margin: 0 auto; /* Centramos el formulario */
     padding: 20px; /* Espaciado interno */
     background-color: #fff; /* Fondo blanco para el formulario */
@@ -222,12 +233,12 @@ form {
 }
 
 form label {
-    margin: 10px 0 5px; /* Margen superior e inferior */
+    margin: 15px 0 5px; /* Margen superior e inferior */
 }
 
 form input, form textarea {
-    padding: 10px;
-    margin-bottom: 10px;
+    padding: 12px; /* Mayor padding para más espacio */
+    margin-bottom: 15px; /* Mayor espacio entre los campos */
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 1em; /* Aumentar el tamaño de la fuente */
@@ -235,22 +246,24 @@ form input, form textarea {
 
 form textarea {
     resize: vertical; /* Permitir cambiar el tamaño verticalmente */
-    min-height: 100px; /* Altura mínima del área de texto */
+    min-height: 120px; /* Altura mínima del área de texto */
 }
 
 form button {
-    padding: 10px;
+    padding: 12px;
     background-color: #ff9900;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1em; /* Aumentar el tamaño de la fuente */
+    transition: background-color 0.3s; /* Efecto de transición */
 }
 
 form button:hover {
     background-color: #e68a00;
 }
+
 
 /* Estilo para el pie de página */
 footer {
