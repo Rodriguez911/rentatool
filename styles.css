@@ -16,6 +16,7 @@ header {
     color: #fff;
     padding: 20px;
     text-align: center;
+    position: relative; /* Permite posicionar el logo */
 }
 
 header h1 {
@@ -42,12 +43,13 @@ header p {
     background-color: #e68a00;
 }
 
-/* Añadir estilo para el logo */
+/* Añadir estilo para el logo en la esquina superior izquierda */
 .logo {
-    width: 150px;  /* Ajusta el tamaño del logo */
-    height: auto;  /* Mantén las proporciones originales */
-    display: block;
-    margin: 0 auto 20px auto;  /* Centra el logo horizontalmente */
+    width: 100px;  /* Hacemos el logo más pequeño */
+    height: auto;
+    position: absolute; /* Posición absoluta para situarlo en la esquina */
+    top: 20px; /* Espacio desde el borde superior */
+    left: 20px; /* Espacio desde el borde izquierdo */
 }
 
 /* Estilo para la sección de cómo funciona */
@@ -132,14 +134,15 @@ header p {
     margin-bottom: 20px;
 }
 
+/* Ajustamos las reseñas para que se expandan a lo ancho */
 .testimonials {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between; /* Deja espacio entre las reseñas */
     flex-wrap: wrap;
 }
 
 .testimonial {
-    width: 30%;
+    width: 30%;  /* Cada reseña ocupará el 30% del espacio horizontal */
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
