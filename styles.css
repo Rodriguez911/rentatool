@@ -209,15 +209,20 @@ header p {
     margin-bottom: 20px;
 }
 
+/* Estilo para el formulario */
 form {
     display: flex;
-    flex-direction: column;
-    max-width: 400px;
+    flex-direction: column; /* Colocar los elementos en una columna */
+    max-width: 500px; /* Limitar el ancho máximo del formulario */
     margin: 0 auto; /* Centramos el formulario */
+    padding: 20px; /* Espaciado interno */
+    background-color: #fff; /* Fondo blanco para el formulario */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para el efecto de elevación */
 }
 
 form label {
-    margin: 10px 0 5px;
+    margin: 10px 0 5px; /* Margen superior e inferior */
 }
 
 form input, form textarea {
@@ -225,6 +230,12 @@ form input, form textarea {
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    font-size: 1em; /* Aumentar el tamaño de la fuente */
+}
+
+form textarea {
+    resize: vertical; /* Permitir cambiar el tamaño verticalmente */
+    min-height: 100px; /* Altura mínima del área de texto */
 }
 
 form button {
@@ -234,6 +245,7 @@ form button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 1em; /* Aumentar el tamaño de la fuente */
 }
 
 form button:hover {
