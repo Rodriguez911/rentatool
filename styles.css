@@ -11,6 +11,32 @@ body {
     background-color: #f4f4f4;
 }
 
+/* Estilo para la navegación */
+nav {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para el header */
 header {
     background: #333;
     color: #fff;
@@ -46,10 +72,22 @@ header p {
 /* Añadir estilo para el logo en la esquina superior izquierda */
 .logo {
     width: 100px;  /* Hacemos el logo más pequeño */
-    height: auto;
+    height: auto;  /* Mantener proporciones */
     position: absolute; /* Posición absoluta para situarlo en la esquina */
     top: 20px; /* Espacio desde el borde superior */
     left: 20px; /* Espacio desde el borde izquierdo */
+}
+
+/* Estilo para el banner */
+.banner {
+    text-align: center; /* Centrar el banner */
+    margin: 20px 0; /* Espaciado vertical */
+}
+
+.banner img {
+    width: 100%; /* Hacer el banner responsivo */
+    max-width: 1000px; /* Ancho máximo del banner */
+    height: auto; /* Mantener proporciones */
 }
 
 /* Estilo para la sección de cómo funciona */
@@ -160,6 +198,48 @@ header p {
     color: #555;
 }
 
+/* Estilo para la sección de contacto */
+#contacto {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+#contacto h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto; /* Centramos el formulario */
+}
+
+form label {
+    margin: 10px 0 5px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    padding: 10px;
+    background-color: #ff9900;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #e68a00;
+}
+
 /* Estilo para el pie de página */
 footer {
     text-align: center;
@@ -168,55 +248,3 @@ footer {
     color: white;
     margin-top: 20px;
 }
-@media (max-width: 768px) {
-    #como-funciona .steps, .testimonials {
-        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
-    }
-
-    .tool {
-        width: 90%; /* Ampliar a 90% en móviles */
-    }
-
-    .testimonial {
-        width: 90%; /* Ampliar a 90% en móviles */
-        margin: 10px auto; /* Centrarlos */
-    }
-}
-
-.tool {
-    transition: transform 0.2s;
-}
-
-.tool:hover {
-    transform: scale(1.05); /* Aumentar ligeramente el tamaño al pasar el mouse */
-}
-nav {
-    background-color: #333;
-    padding: 10px;
-    text-align: center;
-}
-
-nav ul {
-    list-style: none;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-.tool-image {
-    width: 100%;  /* Ajustar al 100% del contenedor */
-    height: auto; /* Mantener proporción */
-    margin: 20px 0; /* Espaciado vertical */
-}
-
