@@ -214,3 +214,9 @@ nav a:hover {
     text-decoration: underline;
 }
 
+.tool-image {
+    width: 100%;  /* Ajustar al 100% del contenedor */
+    height: auto; /* Mantener proporción */
+    margin: 20px 0; /* Espaciado vertical */
+}
+
