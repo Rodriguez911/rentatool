@@ -5,29 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rent-A-Tool | Alquiler de herramientas</title>
     <meta name="description" content="Rent-A-Tool ofrece el alquiler de herramientas de construcción de manera fácil y económica.">
+    <meta name="keywords" content="alquiler, herramientas, construcción, bricolaje">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navegación -->
     <nav>
-        <div class="nav-container">
-            <a href="index.html" class="logo">Rent-A-Tool</a>
-            <ul>
-                <li><a href="#como-funciona">Cómo Funciona</a></li>
-                <li><a href="#catalogo">Catálogo</a></li>
-                <li><a href="#reseñas">Reseñas</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </div>
+        <ul>
+            <li><a href="#como-funciona">Cómo Funciona</a></li>
+            <li><a href="#catalogo">Catálogo</a></li>
+            <li><a href="#reseñas">Reseñas</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
     </nav>
 
     <!-- Header -->
     <header>
+        <!-- Añadir el logo en la esquina superior izquierda -->
+        <a href="index.html">
+            <img src="logo.jpg" alt="Rent-A-Tool Logo" class="logo">
+        </a>
         <h1>Bienvenido a Rent-A-Tool</h1>
         <p>Alquila herramientas de manera fácil, rápida y económica.</p>
-        <a href="#catalogo" class="cta-button">Explorar Catálogo</a>
+        <a href="#como-funciona" class="cta-button">Cómo funciona</a>
     </header>
+
+    <!-- Añadir el banner -->
+    <div class="banner">
+        <img src="banner.png" alt="Banner de Rent-A-Tool">
+    </div>
 
     <!-- Sección: Cómo funciona -->
     <section id="como-funciona">
@@ -59,14 +65,14 @@
             <div class="tool">
                 <a href="taladro.html">
                     <img src="taladro.jpg" alt="Taladro Eléctrico">
-                    <h3 class="tool-title">Taladro Eléctrico</h3>
+                    <h3>Taladro Eléctrico</h3>
                     <p>Desde $10/día</p>
                 </a>
             </div>
             <div class="tool">
                 <a href="sierra.html">
                     <img src="sierra.jpg" alt="Sierra Circular">
-                    <h3 class="tool-title">Sierra Circular</h3>
+                    <h3>Sierra Circular</h3>
                     <p>Desde $15/día</p>
                 </a>
             </div>
