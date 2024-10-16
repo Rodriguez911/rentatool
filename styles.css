@@ -5,9 +5,9 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    background-color: #f2f2f2;
+    background-color: #f4f4f4;
     color: #333;
 }
 
@@ -48,13 +48,35 @@ header {
 
 .logo-container {
     display: flex;
-    justify-content: flex-start; /* Cambiar a flex-start para alinearlo a la izquierda */
-    padding: 10px 20px;
+    justify-content: center;
+    padding: 10px;
 }
 
 .logo {
-    width: 100px; /* Tamaño del logo */
-    margin-right: 20px;
+    width: 120px; /* Ajustar el tamaño del logo */
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 0.5em 0;
+}
+
+h2 {
+    color: #ff9f00; /* Color más visible para el título */
+}
+
+.cta-button {
+    background-color: #ff9f00;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    transition: transform 0.2s;
+    text-decoration: none;
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
 }
 
 .banner {
@@ -63,7 +85,7 @@ header {
 
 .banner img {
     width: 100%; /* Ajustar el tamaño del banner */
-    max-height: 400px; /* Limitar la altura del banner */
+    max-height: 300px; /* Limitar la altura del banner */
     object-fit: cover; /* Asegurarse de que la imagen se ajuste */
 }
 
@@ -78,8 +100,8 @@ h2 {
 
 .steps {
     display: flex;
-    justify-content: space-around; /* Espaciado uniforme entre los pasos */
-    flex-wrap: wrap; /* Permitir el ajuste en pantallas pequeñas */
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .step {
@@ -88,7 +110,7 @@ h2 {
     border-radius: 10px;
     padding: 20px;
     flex: 1; /* Permitir que cada paso ocupe el mismo espacio */
-    max-width: 200px; /* Tamaño máximo de cada paso */
+    max-width: 220px; /* Tamaño máximo de cada paso */
     text-align: center;
     margin: 10px; /* Espaciado entre pasos */
 }
@@ -107,12 +129,12 @@ h2 {
     margin: 10px;
     padding: 10px;
     text-align: center;
-    max-width: 200px; /* Tamaño máximo de cada herramienta */
+    max-width: 220px; /* Tamaño máximo de cada herramienta */
 }
 
-.tool img {
-    width: 100%;
-    height: auto;
+.tool-title {
+    color: #333; /* Aumentar el contraste */
+    font-size: 1.2em;
 }
 
 .testimonials {
@@ -145,22 +167,23 @@ form input,
 form textarea {
     width: 100%;
     padding: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
 button {
-    background-color: #444;
+    background-color: #ff9f00; /* Botón de enviar */
     color: white;
     padding: 10px 15px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #555;
+    background-color: #e68a00; /* Efecto hover para el botón */
 }
 
 footer {
