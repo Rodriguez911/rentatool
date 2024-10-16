@@ -7,15 +7,8 @@
     <meta name="description" content="Rent-A-Tool ofrece el alquiler de herramientas de construcción de manera fácil y económica.">
     <meta name="keywords" content="alquiler, herramientas, construcción, bricolaje">
     <link rel="stylesheet" href="styles.css">
-    
-    <!-- Meta etiquetas para redes sociales -->
-    <meta property="og:title" content="Rent-A-Tool | Alquiler de herramientas">
-    <meta property="og:description" content="Alquila herramientas de construcción de manera fácil y económica.">
-    <meta property="og:image" content="URL_de_tu_imagen_de_previsualización.jpg">
-    <meta property="og:url" content="https://tu-web.com">
 </head>
 <body>
-
     <!-- Navegación -->
     <nav>
         <ul>
@@ -136,7 +129,6 @@
     <!-- Footer -->
     <footer>
         <p>© 2024 Rent-A-Tool. Todos los derechos reservados.</p>
-        <a href="#privacy">Política de Privacidad</a> | <a href="#terms">Términos del Servicio</a>
     </footer>
 
     <!-- Modal para descuento -->
@@ -150,6 +142,7 @@
 
     <!-- Scripts -->
     <script>
+        // Modal de descuento
         var modal = document.getElementById("discountModal");
         var closeBtn = document.getElementsByClassName("close")[0];
 
@@ -169,6 +162,7 @@
             }
         };
 
+        // Botón "Volver arriba"
         window.onscroll = function() {
             var btn = document.getElementById("scrollTopBtn");
             if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
@@ -182,6 +176,7 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
+        // Filtro de herramientas
         document.getElementById('category').addEventListener('change', function() {
             var selectedCategory = this.value;
             var tools = document.querySelectorAll('.tool');
