@@ -16,6 +16,10 @@ nav {
     background-color: #333;
     padding: 10px;
     text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 nav ul {
@@ -36,208 +40,90 @@ nav a:hover {
     text-decoration: underline;
 }
 
+body {
+    padding-top: 60px;
+}
+
+/* Botón para volver arriba */
+#scrollTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background-color: #ff9900;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#scrollTopBtn:hover {
+    background-color: #e68a00;
+}
+
 /* Estilo para el header */
 header {
-    background: #333;
-    color: #fff;
-    padding: 20px;
+    background: #f4f4f4 url('header-bg.jpg') no-repeat center center/cover;
+    color: #333;
     text-align: center;
-    position: relative; /* Permite posicionar el logo */
+    padding: 50px 0;
 }
 
 header h1 {
-    font-size: 2.5em;
+    font-size: 3rem;
     margin-bottom: 10px;
 }
 
-header p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-}
-
 .cta-button {
-    display: inline-block;
-    padding: 10px 20px;
     background-color: #ff9900;
-    color: #fff;
-    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
     border-radius: 5px;
-    margin-top: 15px;
+    text-decoration: none;
 }
 
 .cta-button:hover {
     background-color: #e68a00;
 }
 
-/* Añadir estilo para el logo en la esquina superior izquierda */
-.logo {
-    width: 100px;  /* Hacemos el logo más pequeño */
-    height: auto;  /* Mantener proporciones */
-    position: absolute; /* Posición absoluta para situarlo en la esquina */
-    top: 20px; /* Espacio desde el borde superior */
-    left: 20px; /* Espacio desde el borde izquierdo */
+/* Estilo para la sección de catálogo */
+.filter {
+    margin: 20px 0;
 }
 
-/* Estilo para el banner */
-.banner {
-    text-align: center; /* Centrar el banner */
-    margin: 20px 0; /* Espaciado vertical */
-}
-
-.banner img {
-    width: 100%; /* Hacer el banner responsivo */
-    max-width: 1000px; /* Ancho máximo del banner */
-    height: auto; /* Mantener proporciones */
-}
-
-/* Estilo para la sección de cómo funciona */
-#como-funciona {
-    background-color: #fff;
-    padding: 40px 20px;
-    text-align: center;
-}
-
-#como-funciona h2 {
-    margin-bottom: 20px;
-}
-
-#como-funciona .steps {
+.tools {
     display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-    flex-wrap: wrap;
-}
-
-#como-funciona .step {
-    width: 22%;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-#como-funciona .step h3 {
-    margin-bottom: 10px;
-}
-
-/* Estilo para la sección de catálogo de herramientas */
-#catalogo {
-    background-color: #f9f9f9;
-    padding: 40px 20px;
-    text-align: center;
-}
-
-#catalogo h2 {
-    margin-bottom: 20px;
-}
-
-#catalogo .tools {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .tool {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
     text-align: center;
-    width: 30%;
-    background-color: #fff;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .tool img {
-    width: 150px;
+    max-width: 100%;
     height: auto;
-    margin-bottom: 10px;
 }
 
 .tool h3 {
-    margin-bottom: 10px;
+    margin: 10px 0;
 }
 
-.tool p {
-    font-size: 1.2em;
-    color: #333;
-}
-
-/* Estilo para la sección de reseñas */
-#reseñas {
-    padding: 40px 20px;
-    background-color: #fff;
-}
-
-#reseñas h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-/* Ajustamos las reseñas para que se expandan a lo ancho */
 .testimonials {
     display: flex;
-    justify-content: space-between; /* Deja espacio entre las reseñas */
-    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .testimonial {
-    width: 30%;  /* Cada reseña ocupará el 30% del espacio horizontal */
     background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.testimonial p {
-    font-style: italic;
-    margin-bottom: 10px;
-}
-
-.testimonial h4 {
-    color: #555;
-}
-
-/* Estilo para la sección de contacto */
-#contacto {
-    padding: 40px 20px;
-    background-color: #f9f9f9;
-}
-
-#contacto h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 400px;
-    margin: 0 auto; /* Centramos el formulario */
-}
-
-form label {
-    margin: 10px 0 5px;
-}
-
-form input, form textarea {
+    border: 1px solid #ddd;
     padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-form button {
-    padding: 10px;
-    background-color: #ff9900;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-form button:hover {
-    background-color: #e68a00;
+    border-radius: 10px;
 }
 
 /* Estilo para el pie de página */
@@ -246,14 +132,32 @@ footer {
     padding: 20px;
     background-color: #333;
     color: white;
-    margin-top: 20px;
-}
-.cta-button, .tool img, .testimonial {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.cta-button:hover, .tool img:hover, .testimonial:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+/* Modal de descuento */
+.modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
 }
 
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 50%;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
