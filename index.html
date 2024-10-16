@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
     <!-- Navegación -->
     <nav>
         <ul>
@@ -20,21 +19,17 @@
         </ul>
     </nav>
 
-    <!-- Botón "Volver arriba" -->
-    <button id="scrollTopBtn" onclick="scrollToTop()">⬆️</button>
-
     <!-- Header -->
     <header>
-    <a href="index.html">
-        <img src="logo.jpg" alt="Rent-A-Tool Logo" class="logo">
-    </a>
-    <h1>Bienvenido a Rent-A-Tool</h1>
-    <p>Alquila herramientas de manera fácil, rápida y económica.</p>
-    <a href="#como-funciona" class="cta-button">Cómo funciona</a>
-</header>
+        <a href="index.html">
+            <img src="logo.jpg" alt="Rent-A-Tool Logo" class="logo">
+        </a>
+        <h1>Bienvenido a Rent-A-Tool</h1>
+        <p>Alquila herramientas de manera fácil, rápida y económica.</p>
+        <a href="#como-funciona" class="cta-button">Cómo funciona</a>
+    </header>
 
-
-    <!-- Banner -->
+    <!-- Añadir el banner -->
     <div class="banner">
         <img src="banner.png" alt="Banner de Rent-A-Tool">
     </div>
@@ -65,23 +60,15 @@
     <!-- Sección: Catálogo de herramientas -->
     <section id="catalogo">
         <h2>Catálogo de Herramientas</h2>
-        <div class="filter">
-            <label for="category">Filtrar por categoría:</label>
-            <select id="category">
-                <option value="all">Todas</option>
-                <option value="construction">Construcción</option>
-                <option value="electric">Eléctricas</option>
-            </select>
-        </div>
         <div class="tools">
-            <div class="tool construction">
+            <div class="tool">
                 <a href="taladro.html">
                     <img src="taladro.jpg" alt="Taladro Eléctrico">
                     <h3>Taladro Eléctrico</h3>
                     <p>Desde $10/día</p>
                 </a>
             </div>
-            <div class="tool electric">
+            <div class="tool">
                 <a href="sierra.html">
                     <img src="sierra.jpg" alt="Sierra Circular">
                     <h3>Sierra Circular</h3>
@@ -131,65 +118,5 @@
     <footer>
         <p>© 2024 Rent-A-Tool. Todos los derechos reservados.</p>
     </footer>
-
-    <!-- Modal de descuento -->
-    <div id="discountModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>¡Obtén un 10% de descuento!</h2>
-            <p>Alquila tu herramienta en las próximas 24 horas y disfruta de un descuento exclusivo.</p>
-        </div>
-    </div>
-
-    <!-- Scripts -->
-    <script>
-        // Modal de descuento
-        var modal = document.getElementById("discountModal");
-        var closeBtn = document.getElementsByClassName("close")[0];
-
-        window.onload = function() {
-            setTimeout(function() {
-                modal.style.display = "flex";
-            }, 3000);
-        };
-
-        closeBtn.onclick = function() {
-            modal.style.display = "none";
-        };
-
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        };
-
-        // Botón "Volver arriba"
-        window.onscroll = function() {
-            var btn = document.getElementById("scrollTopBtn");
-            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                btn.style.display = "block";
-            } else {
-                btn.style.display = "none";
-            }
-        };
-
-        function scrollToTop() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
-        // Filtro de herramientas
-        document.getElementById('category').addEventListener('change', function() {
-            var selectedCategory = this.value;
-            var tools = document.querySelectorAll('.tool');
-
-            tools.forEach(function(tool) {
-                if (selectedCategory === 'all' || tool.classList.contains(selectedCategory)) {
-                    tool.style.display = 'block';
-                } else {
-                    tool.style.display = 'none';
-                }
-            });
-        });
-    </script>
 </body>
 </html>
