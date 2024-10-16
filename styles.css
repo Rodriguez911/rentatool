@@ -1,251 +1,85 @@
-/* Reset de márgenes y paddings */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* styles.css */
 
+/* Estilos globales */
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    background-color: #2e2e2e;
+    color: white;
 }
 
-/* Estilo para la navegación */
+/* Navegación */
 nav {
     background-color: #333;
     padding: 10px;
-    text-align: center;
 }
 
 nav ul {
-    list-style: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end; /* Alinea la navegación a la derecha */
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
+nav li {
+    margin-left: 20px;
 }
 
 nav a {
-    color: #fff;
+    color: white;
     text-decoration: none;
 }
 
-nav a:hover {
-    text-decoration: underline;
-}
-
-/* Estilo para el header */
+/* Header */
 header {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Alinear el contenido a la izquierda */
-    padding: 40px 20px; /* Espacio arriba y abajo, y a los lados */
-    background: #333;
-    color: #fff;
-    text-align: left; /* Cambiar a alineación a la izquierda */
-}
-
-header h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-}
-
-header p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-}
-
-.cta-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #ff9900;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 15px;
-}
-
-.cta-button:hover {
-    background-color: #e68a00;
-}
-
-/* Estilo para el logo en la esquina superior izquierda */
-.logo {
-    width: 100px;  /* Hacemos el logo más pequeño */
-    height: auto;  /* Mantener proporciones */
-    margin-bottom: 30px; /* Espacio debajo del logo */
-    max-width: 150px; /* Ajusta el tamaño máximo del logo según sea necesario */
-}
-
-/* Estilo para el banner */
-.banner {
-    text-align: center; /* Centrar el banner */
-    margin: 20px 0; /* Espaciado vertical */
-}
-
-.banner img {
-    width: 100%; /* Hacer el banner responsivo */
-    max-width: 1000px; /* Ancho máximo del banner */
-    height: auto; /* Mantener proporciones */
-}
-
-/* Estilo para la sección de cómo funciona */
-#como-funciona {
-    background-color: #fff;
-    padding: 40px 20px;
-    text-align: center;
-}
-
-#como-funciona h2 {
-    margin-bottom: 20px;
-}
-
-#como-funciona .steps {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-    flex-wrap: wrap;
-}
-
-#como-funciona .step {
-    width: 22%;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-#como-funciona .step h3 {
-    margin-bottom: 10px;
-}
-
-/* Estilo para la sección de catálogo de herramientas */
-#catalogo {
-    background-color: #f9f9f9;
-    padding: 40px 20px;
-    text-align: center;
-}
-
-#catalogo h2 {
-    margin-bottom: 20px;
-}
-
-#catalogo .tools {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-    flex-wrap: wrap;
-}
-
-.tool {
-    text-align: center;
-    width: 30%;
-    background-color: #fff;
+    text-align: center; /* Centra el texto */
     padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative; /* Para posicionar el logo */
 }
 
-.tool img {
-    width: 150px;
+.logo {
+    position: absolute; /* Permite mover el logo */
+    left: 20px; /* Distancia desde la izquierda */
+    top: 20px; /* Distancia desde la parte superior */
+    width: 100px; /* Ajusta el tamaño del logo si es necesario */
+}
+
+/* Banner */
+.banner img {
+    width: 100%;
     height: auto;
-    margin-bottom: 10px;
 }
 
-.tool h3 {
-    margin-bottom: 10px;
+/* Secciones */
+section {
+    padding: 20px;
 }
 
-.tool p {
-    font-size: 1.2em;
-    color: #333;
-}
-
-/* Estilo para la sección de reseñas */
-#reseñas {
-    padding: 40px 20px;
-    background-color: #fff;
-}
-
-#reseñas h2 {
+h2 {
     text-align: center;
-    margin-bottom: 20px;
 }
 
-/* Ajustamos las reseñas para que se expandan a lo ancho */
+/* Testimonios */
 .testimonials {
     display: flex;
-    justify-content: space-between; /* Deja espacio entre las reseñas */
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
 }
 
 .testimonial {
-    width: 30%;  /* Cada reseña ocupará el 30% del espacio horizontal */
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #444;
     padding: 15px;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.testimonial p {
-    font-style: italic;
-    margin-bottom: 10px;
-}
-
-.testimonial h4 {
-    color: #555;
-}
-
-/* Estilo para la sección de contacto */
-#contacto {
-    padding: 40px 20px;
-    background-color: #f9f9f9;
-}
-
-#contacto h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 400px;
-    margin: 0 auto; /* Centramos el formulario */
-}
-
-form label {
-    margin: 10px 0 5px;
-}
-
-form input, form textarea {
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-form button {
-    padding: 10px;
-    background-color: #ff9900;
-    color: white;
-    border: none;
+    margin: 10px;
     border-radius: 5px;
-    cursor: pointer;
+    width: 300px;
 }
 
-form button:hover {
-    background-color: #e68a00;
-}
-
-/* Estilo para el pie de página */
+/* Footer */
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 10px;
     background-color: #333;
-    color: white;
-    margin-top: 20px;
 }
+
