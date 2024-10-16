@@ -40,11 +40,11 @@ nav a:hover {
 header {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centra el contenido horizontalmente */
-    padding: 40px 0; /* Espacio arriba y abajo para más separación */
+    align-items: flex-start; /* Alinear el contenido a la izquierda */
+    padding: 40px 20px; /* Espacio arriba y abajo, y a los lados */
     background: #333;
     color: #fff;
-    text-align: center;
+    text-align: left; /* Cambiar a alineación a la izquierda */
 }
 
 header h1 {
