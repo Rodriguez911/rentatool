@@ -1,3 +1,4 @@
+/* Reset de márgenes y paddings */
 * {
     margin: 0;
     padding: 0;
@@ -5,177 +6,245 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
     background-color: #f4f4f4;
-    color: #333;
 }
 
+/* Estilo para la navegación */
 nav {
     background-color: #333;
-    padding: 10px 0;
-}
-
-.nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    padding: 10px;
+    text-align: center;
 }
 
 nav ul {
-    display: flex;
-}
-
-nav ul li {
     list-style: none;
 }
 
-nav ul li a {
-    color: white;
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: #fff;
     text-decoration: none;
-    padding: 10px 15px;
 }
 
-nav ul li a:hover {
-    background-color: #555;
+nav a:hover {
+    text-decoration: underline;
 }
 
+/* Estilo para el header */
 header {
+    background: #333;
+    color: #fff;
+    padding: 20px;
     text-align: center;
-    padding: 40px 0;
-    background-color: #444;
-    color: white;
+    position: relative; /* Permite posicionar el logo */
 }
 
-h1 {
+header h1 {
     font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
 }
 
 .cta-button {
-    background-color: #ff9f00;
-    color: white;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 5px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff9900;
+    color: #fff;
     text-decoration: none;
-    transition: transform 0.2s;
+    border-radius: 5px;
+    margin-top: 15px;
 }
 
 .cta-button:hover {
-    transform: scale(1.05);
+    background-color: #e68a00;
 }
 
+/* Añadir estilo para el logo en la esquina superior izquierda */
+.logo {
+    width: 100px;  /* Hacemos el logo más pequeño */
+    height: auto;  /* Mantener proporciones */
+    position: absolute; /* Posición absoluta para situarlo en la esquina */
+    top: 20px; /* Espacio desde el borde superior */
+    left: 20px; /* Espacio desde el borde izquierdo */
+}
+
+/* Estilo para el banner */
 .banner {
-    text-align: center;
+    text-align: center; /* Centrar el banner */
+    margin: 20px 0; /* Espaciado vertical */
 }
 
 .banner img {
-    width: 100%; /* Ajustar el tamaño del banner */
-    max-height: 250px; /* Limitar la altura del banner */
-    object-fit: cover; /* Asegurarse de que la imagen se ajuste */
+    width: 100%; /* Hacer el banner responsivo */
+    max-width: 1000px; /* Ancho máximo del banner */
+    height: auto; /* Mantener proporciones */
 }
 
-section {
-    padding: 20px;
+/* Estilo para la sección de cómo funciona */
+#como-funciona {
+    background-color: #fff;
+    padding: 40px 20px;
+    text-align: center;
 }
 
-h2 {
+#como-funciona h2 {
+    margin-bottom: 20px;
+}
+
+#como-funciona .steps {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+#como-funciona .step {
+    width: 22%;
     text-align: center;
     margin-bottom: 20px;
 }
 
-.steps {
+#como-funciona .step h3 {
+    margin-bottom: 10px;
+}
+
+/* Estilo para la sección de catálogo de herramientas */
+#catalogo {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#catalogo h2 {
+    margin-bottom: 20px;
+}
+
+#catalogo .tools {
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.step {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 20px;
-    flex: 1;
-    max-width: 220px;
-    text-align: center;
-    margin: 10px;
-}
-
-.tools {
-    display: flex;
-    justify-content: center;
+    margin-top: 20px;
     flex-wrap: wrap;
 }
 
 .tool {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    margin: 10px;
-    padding: 10px;
     text-align: center;
-    max-width: 220px;
+    width: 30%;
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.tool-title {
-    color: #333;
+.tool img {
+    width: 150px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.tool h3 {
+    margin-bottom: 10px;
+}
+
+.tool p {
     font-size: 1.2em;
+    color: #333;
 }
 
+/* Estilo para la sección de reseñas */
+#reseñas {
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+#reseñas h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Ajustamos las reseñas para que se expandan a lo ancho */
 .testimonials {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: space-between; /* Deja espacio entre las reseñas */
+    flex-wrap: wrap;
 }
 
 .testimonial {
+    width: 30%;  /* Cada reseña ocupará el 30% del espacio horizontal */
     background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 10px;
-    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin-bottom: 20px;
     text-align: center;
+}
+
+.testimonial p {
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.testimonial h4 {
+    color: #555;
+}
+
+/* Estilo para la sección de contacto */
+#contacto {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+#contacto h2 {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 form {
-    max-width: 600px;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto; /* Centramos el formulario */
 }
 
 form label {
-    display: block;
     margin: 10px 0 5px;
 }
 
-form input,
-form textarea {
-    width: 100%;
+form input, form textarea {
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 4px;
 }
 
-button {
-    background-color: #ff9f00;
+form button {
+    padding: 10px;
+    background-color: #ff9900;
     color: white;
-    padding: 10px 15px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
 }
 
-button:hover {
+form button:hover {
     background-color: #e68a00;
 }
 
+/* Estilo para el pie de página */
 footer {
     text-align: center;
-    padding: 20px 0;
+    padding: 20px;
     background-color: #333;
     color: white;
+    margin-top: 20px;
 }
