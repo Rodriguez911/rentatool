@@ -7,8 +7,15 @@
     <meta name="description" content="Rent-A-Tool ofrece el alquiler de herramientas de construcción de manera fácil y económica.">
     <meta name="keywords" content="alquiler, herramientas, construcción, bricolaje">
     <link rel="stylesheet" href="styles.css">
+    
+    <!-- Meta etiquetas para redes sociales -->
+    <meta property="og:title" content="Rent-A-Tool | Alquiler de herramientas">
+    <meta property="og:description" content="Alquila herramientas de construcción de manera fácil y económica.">
+    <meta property="og:image" content="URL_de_tu_imagen_de_previsualización.jpg">
+    <meta property="og:url" content="https://tu-web.com">
 </head>
 <body>
+
     <!-- Navegación -->
     <nav>
         <ul>
@@ -18,6 +25,9 @@
             <li><a href="#contacto">Contacto</a></li>
         </ul>
     </nav>
+
+    <!-- Botón "Volver arriba" -->
+    <button id="scrollTopBtn" onclick="scrollToTop()">⬆️</button>
 
     <!-- Header -->
     <header>
@@ -61,15 +71,23 @@
     <!-- Sección: Catálogo de herramientas -->
     <section id="catalogo">
         <h2>Catálogo de Herramientas</h2>
+        <div class="filter">
+            <label for="category">Filtrar por categoría:</label>
+            <select id="category">
+                <option value="all">Todas</option>
+                <option value="construction">Construcción</option>
+                <option value="electric">Eléctricas</option>
+            </select>
+        </div>
         <div class="tools">
-            <div class="tool">
+            <div class="tool construction">
                 <a href="taladro.html">
                     <img src="taladro.jpg" alt="Taladro Eléctrico">
                     <h3>Taladro Eléctrico</h3>
                     <p>Desde $10/día</p>
                 </a>
             </div>
-            <div class="tool">
+            <div class="tool electric">
                 <a href="sierra.html">
                     <img src="sierra.jpg" alt="Sierra Circular">
                     <h3>Sierra Circular</h3>
@@ -118,6 +136,64 @@
     <!-- Footer -->
     <footer>
         <p>© 2024 Rent-A-Tool. Todos los derechos reservados.</p>
+        <a href="#privacy">Política de Privacidad</a> | <a href="#terms">Términos del Servicio</a>
     </footer>
+
+    <!-- Modal para descuento -->
+    <div id="discountModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>¡Obtén un 10% de descuento!</h2>
+            <p>Alquila tu herramienta en las próximas 24 horas y disfruta de un descuento exclusivo.</p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        var modal = document.getElementById("discountModal");
+        var closeBtn = document.getElementsByClassName("close")[0];
+
+        window.onload = function() {
+            setTimeout(function() {
+                modal.style.display = "flex";
+            }, 3000);
+        };
+
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+        };
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        };
+
+        window.onscroll = function() {
+            var btn = document.getElementById("scrollTopBtn");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        };
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        document.getElementById('category').addEventListener('change', function() {
+            var selectedCategory = this.value;
+            var tools = document.querySelectorAll('.tool');
+
+            tools.forEach(function(tool) {
+                if (selectedCategory === 'all' || tool.classList.contains(selectedCategory)) {
+                    tool.style.display = 'block';
+                } else {
+                    tool.style.display = 'none';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
