@@ -305,3 +305,14 @@ footer {
     right: 20px;
     cursor: pointer;
 }
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar horizontalmente */
+    padding: 20px 0; /* Espacio arriba y abajo */
+}
+
+.logo {
+    margin-bottom: 20px; /* Espacio debajo del logo */
+}
